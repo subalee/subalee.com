@@ -1,8 +1,9 @@
+import { profile } from 'console';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import { useCallback } from 'react';
-import styles from '../styles/Home.module.css';
+import profilePic from '../public/profilepic.webp';
 
 const Home: NextPage = () => {
   const handleOnClick = useCallback(() => window.open('mailto:dsubally@gmail.com'), []);
@@ -74,7 +75,7 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className="h-1/2 md:h-auto md:w-1/2 relative">
-        <Image src="/profilepic.jpg" layout="fill" objectFit="cover" objectPosition="top" />
+        <Image src={profilePic} layout="fill" objectFit="cover" objectPosition="top" placeholder="blur" />
       </div>
     </div>
   );
